@@ -1,7 +1,5 @@
-ponteiros: ponteiros.c
+all: ponteiros.c inteiros.c
 	gcc  ponteiros.c -o ponteiros
-
-inteiros: inteiros.c
 	gcc inteiros.c  -o inteiros
 
 
