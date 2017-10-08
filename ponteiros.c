@@ -47,7 +47,7 @@ void insert(AIG_NODE *aig_node)
 		printf("Sem memoria disponivel!\n");
 		exit(1);
 	}
-	printf("Qual Nó é adjacente a este Nó AIG? \nDigite o nó adjacente a este:  ");
+	printf("Qual Nó este Nó AIG tem sua saída conectada? \nDigite o nó adjacente a este:  ");
 	scanf(" %d", &new->adjacent);
 	fflush(stdin);
 	printf("É invertido? (1 - Sim / 0 - Não) \n");
@@ -76,8 +76,7 @@ int print_aig(AIG_NODE *aig_node)
 	tmp = aig_node->next;
 	while (tmp != NULL)
 	{
-		printf("* %d", tmp->adjacent); 
-		printf(" - Invertido: %d \n", tmp->inverted);		
+		printf("\t Este Nó AIG tem sua saída (Invertida? %d) conectada na entrada do Nó AIG %d\n", tmp->inverted, tmp->adjacent); 
 		tmp = tmp->next;
 	}
 	printf("\n\n");
